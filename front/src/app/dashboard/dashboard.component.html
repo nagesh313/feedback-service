@@ -1,0 +1,16 @@
+<div *ngIf="list.length>0">
+  <div class="container">
+    <div class="row">
+      <div class="col-6">Comment</div>
+      <div class="col-2">Rating</div>
+      <div class="col-2">Date</div>
+    </div>
+  </div>
+  <div @list class="container">
+    <div @items class="row" *ngFor="let item of list">
+      <div class="col-6">{{item.comment}}</div>
+      <div class="col-2">{{item.rating}}</div>
+      <div class="col-2">{{item.date}}</div>
+    </div>
+  </div>
+</div>
