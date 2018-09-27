@@ -38,8 +38,8 @@ public class FeedbackController {
 	}
 
 	@GetMapping("/questions/{id}")
-	public Optional<FeedbackQuestionaire> getFeedbackQuestionaireById(@PathVariable String id) {
-		return feedbackQuestionaireService.getFeedbackQuestionaire(id);
+	public FeedbackQuestionaire getFeedbackQuestionaireById(@PathVariable String id) {
+		return feedbackQuestionaireService.getFeedbackQuestionaire(id).get();
 	}
 
 	@PostMapping("/submit")
