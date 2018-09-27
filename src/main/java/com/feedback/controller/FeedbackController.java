@@ -1,7 +1,6 @@
 package com.feedback.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -38,8 +37,8 @@ public class FeedbackController {
 	}
 
 	@GetMapping("/questions/{id}")
-	public FeedbackQuestionaire getFeedbackQuestionaireById(@PathVariable String id) {
-		return feedbackQuestionaireService.getFeedbackQuestionaire(id).get();
+	public List<FeedbackQuestionaire> getFeedbackQuestionaireById(@PathVariable String id) {
+		return feedbackQuestionaireService.getFeedbackQuestionaire(id);
 	}
 
 	@PostMapping("/submit")

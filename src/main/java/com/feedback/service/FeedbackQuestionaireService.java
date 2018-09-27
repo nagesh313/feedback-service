@@ -1,7 +1,6 @@
 package com.feedback.service;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,7 +21,7 @@ public class FeedbackQuestionaireService {
 		return feedbackQuestionaireRepository.findAll();
 	}
 
-	public Optional<FeedbackQuestionaire> getFeedbackQuestionaire(String feedbackQuestionaire) {
+	public List<FeedbackQuestionaire> getFeedbackQuestionaire(String feedbackQuestionaire) {
 		return feedbackQuestionaireRepository.findByFeedbackQuestionaire(feedbackQuestionaire);
 	}
 }
