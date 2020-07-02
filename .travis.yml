@@ -1,6 +1,7 @@
 language: java
 jdk:
- - oraclejdk9
+ - oraclejdk8
+dist: xenial
 deploy:
  provider: heroku
  api-key: 
